@@ -1,5 +1,5 @@
 /* ===========================
-   CHAMELEON ACADEMIA DE DATOS
+   Lizard Data Academy
    main.js
    =========================== */
 
