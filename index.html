@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chameleon · Academia de Datos</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Simplified chameleon silhouette -->
+          <circle cx="28" cy="10" r="7" fill="#0EBE9A"/>
+          <circle cx="28" cy="10" r="3" fill="#fff"/>
+          <circle cx="29.5" cy="8.5" r="1.2" fill="#000"/>
+          <path d="M21 12 Q10 14 6 22 Q4 28 8 32 Q12 36 18 34 Q22 32 24 28 L28 17" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M8 32 Q4 36 2 38" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M13 33 Q11 37 10 39" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+          <path d="M28 17 Q32 20 35 16 Q37 12 34 10" stroke="#0EBE9A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="30" cy="23" rx="3" ry="1.5" fill="#0EBE9A" transform="rotate(-20 30 23)"/>
+          <ellipse cx="34" cy="20" rx="2.5" ry="1.2" fill="#0EBE9A" transform="rotate(-10 34 20)"/>
+        </svg>
+        <span class="nav__brand">CHAMELEON <span>Academia de Datos</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#comunidad">Comunidad</a>
+        <a href="#contacto" class="nav__cta">Contacto</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__content">
+      <p class="hero__tag">Academia de Datos</p>
+      <h1 class="hero__title">Domina tus datos.<br/><span>Transforma el futuro.</span></h1>
+      <p class="hero__sub">Formación práctica en ciencia de datos, analítica y programación. Aprende a adaptarte y a innovar en un mundo impulsado por los datos.</p>
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary">Explorar cursos</a>
+        <a href="#sobre" class="btn btn--ghost">Saber más</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__blob"></div>
+      <div class="hero__card hero__card--1">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h18v14H3zM3 10h18M8 17v4M16 17v4M5 21h14" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span>SQL & Bases de datos</span>
+      </div>
+      <div class="hero__card hero__card--2">
+        <svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Analítica avanzada</span>
+      </div>
+      <div class="hero__card hero__card--3">
+        <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Python & Programación</span>
+      </div>
+      <div class="hero__mascot">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="80" cy="28" r="22" fill="#0EBE9A"/>
+          <circle cx="80" cy="28" r="10" fill="#fff"/>
+          <circle cx="83" cy="24" r="4" fill="#000"/>
+          <circle cx="84.5" cy="22.5" r="1.5" fill="#fff"/>
+          <path d="M58 32 Q32 38 22 58 Q14 74 22 86 Q32 100 50 96 Q62 92 68 80 L80 48" stroke="#000" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 86 Q12 98 6 110" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+          <path d="M36 94 Q28 104 26 114" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+          <path d="M80 48 Q92 56 100 44 Q108 32 100 26" stroke="#0EBE9A" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <ellipse cx="88" cy="65" rx="9" ry="4.5" fill="#0EBE9A" transform="rotate(-20 88 65)"/>
+          <ellipse cx="100" cy="56" rx="7.5" ry="3.5" fill="#0EBE9A" transform="rotate(-10 100 56)"/>
+          <ellipse cx="108" cy="46" rx="6" ry="3" fill="#0EBE9A" transform="rotate(5 108 46)"/>
+          <circle cx="50" cy="60" r="3" fill="#0EBE9A" opacity="0.4"/>
+          <circle cx="38" cy="70" r="2" fill="#0EBE9A" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stats__item">
+        <strong>+2.000</strong>
+        <span>Estudiantes formados</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <strong>15+</strong>
+        <span>Cursos activos</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <strong>95%</strong>
+        <span>Tasa de satisfacción</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <strong>100%</strong>
+        <span>Aprendizaje práctico</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="sobre__inner">
+      <div class="sobre__text">
+        <p class="section-tag">Nuestra misión</p>
+        <h2>Adaptación e innovación<br/>en el mundo de los datos</h2>
+        <p>En Chameleon creemos que la adaptabilidad es la habilidad más valiosa del siglo XXI. Como el camaleón, enseñamos a nuestros estudiantes a transformarse con el entorno, dominando las herramientas y metodologías que el mercado demanda hoy y las que demandará mañana.</p>
+        <ul class="sobre__values">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#0EBE9A" stroke-width="1.5"/><path d="m21 21-4.35-4.35" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Curiosidad
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Aprendizaje continuo
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0EBE9A" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Precisión
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Innovación
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#0EBE9A" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Comunidad
+          </li>
+        </ul>
+      </div>
+      <div class="sobre__grid">
+        <div class="sobre__feature">
+          <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#0EBE9A" stroke-width="1.5"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12" stroke="#0EBE9A" stroke-width="1.5"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+          <h3>SQL & Bases de datos</h3>
+          <p>Desde fundamentos hasta optimización de queries complejas en entornos productivos.</p>
+        </div>
+        <div class="sobre__feature">
+          <svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Analítica & BI</h3>
+          <p>Power BI, Tableau y visualización de datos para tomar decisiones basadas en evidencia.</p>
+        </div>
+        <div class="sobre__feature">
+          <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Python para datos</h3>
+          <p>Pandas, NumPy, scikit-learn y todo el ecosistema Python aplicado a casos reales.</p>
+        </div>
+        <div class="sobre__feature">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#0EBE9A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Plataformas de datos</h3>
+          <p>Databricks, Snowflake, dbt y arquitecturas modernas de datos en la nube.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS DESTACADOS -->
+  <section class="cursos" id="cursos">
+    <div class="cursos__inner">
+      <p class="section-tag">Formación</p>
+      <h2>Cursos destacados</h2>
+      <div class="cursos__grid">
+        <div class="curso-card">
+          <div class="curso-card__badge">Más popular</div>
+          <div class="curso-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Python para Analítica de Datos</h3>
+          <p>Domina el ecosistema Python: Pandas, Matplotlib, NumPy y machine learning básico.</p>
+          <div class="curso-card__meta">
+            <span>40h · Intermedio</span>
+            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="curso-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#0EBE9A" stroke-width="1.5"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12" stroke="#0EBE9A" stroke-width="1.5"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+          </div>
+          <h3>SQL de cero a avanzado</h3>
+          <p>Aprende a consultar, transformar y optimizar datos en cualquier motor SQL del mercado.</p>
+          <div class="curso-card__meta">
+            <span>30h · Todos los niveles</span>
+            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="curso-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#0EBE9A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Power BI Profesional</h3>
+          <p>Dashboards interactivos, DAX avanzado y publicación de informes en producción.</p>
+          <div class="curso-card__meta">
+            <span>25h · Intermedio</span>
+            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          </div>
+        </div>
+        <div class="curso-card">
+          <div class="curso-card__badge curso-card__badge--new">Nuevo</div>
+          <div class="curso-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Data Engineering con dbt & Snowflake</h3>
+          <p>Construye pipelines de datos modernos y escalables sobre arquitecturas cloud.</p>
+          <div class="curso-card__meta">
+            <span>50h · Avanzado</span>
+            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / PEDIR INFO -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__inner">
+      <div class="contacto__text">
+        <p class="section-tag section-tag--light">¿Te interesa?</p>
+        <h2>Pide información<br/>sin compromiso</h2>
+        <p>Selecciona el curso que te interesa y te enviamos toda la información: temario, fechas, precios y modalidades disponibles.</p>
+        <div class="contacto__info">
+          <div class="contacto__info-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#0EBE9A" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+            <span>hola@chameleonacademia.com</span>
+          </div>
+          <div class="contacto__info-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 18z" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+            <span>+34 900 000 000</span>
+          </div>
+        </div>
+      </div>
+      <form class="contacto__form" id="infoForm" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+        </div>
+        <div class="form-group">
+          <label for="curso">Curso de interés *</label>
+          <select id="curso" name="curso" required>
+            <option value="" disabled selected>Selecciona un curso...</option>
+            <optgroup label="Python & Programación">
+              <option value="python-analitica">Python para Analítica de Datos</option>
+              <option value="python-ml">Machine Learning con Python</option>
+              <option value="python-avanzado">Python Avanzado para Ingeniería de Datos</option>
+            </optgroup>
+            <optgroup label="SQL & Bases de datos">
+              <option value="sql-basico">SQL de cero a avanzado</option>
+              <option value="sql-performance">SQL Performance & Optimización</option>
+              <option value="sql-nosql">SQL vs NoSQL: guía práctica</option>
+            </optgroup>
+            <optgroup label="Analítica & Business Intelligence">
+              <option value="powerbi">Power BI Profesional</option>
+              <option value="tableau">Tableau para analistas</option>
+              <option value="dax">DAX Avanzado para Power BI</option>
+            </optgroup>
+            <optgroup label="Data Engineering & Cloud">
+              <option value="dbt-snowflake">Data Engineering con dbt & Snowflake</option>
+              <option value="databricks">Databricks & Apache Spark</option>
+              <option value="cloud-data">Arquitecturas Cloud de Datos (AWS/Azure/GCP)</option>
+            </optgroup>
+            <optgroup label="Ciencia de Datos">
+              <option value="estadistica">Estadística para Ciencia de Datos</option>
+              <option value="ml-avanzado">Machine Learning Avanzado</option>
+              <option value="deep-learning">Introducción al Deep Learning</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Tienes alguna pregunta específica?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+          Solicitar información
+        </button>
+        <div class="form__success" id="formSuccess">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>¡Gracias! Nos pondremos en contacto contigo pronto.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <svg class="nav__logo-icon" viewBox="0 0 40 40" fill="none">
+            <circle cx="28" cy="10" r="7" fill="#0EBE9A"/>
+            <circle cx="28" cy="10" r="3" fill="#fff"/>
+            <circle cx="29.5" cy="8.5" r="1.2" fill="#000"/>
+            <path d="M21 12 Q10 14 6 22 Q4 28 8 32 Q12 36 18 34 Q22 32 24 28 L28 17" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M8 32 Q4 36 2 38" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M13 33 Q11 37 10 39" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 17 Q32 20 35 16 Q37 12 34 10" stroke="#0EBE9A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="30" cy="23" rx="3" ry="1.5" fill="#0EBE9A" transform="rotate(-20 30 23)"/>
+            <ellipse cx="34" cy="20" rx="2.5" ry="1.2" fill="#0EBE9A" transform="rotate(-10 34 20)"/>
+          </svg>
+          <span class="nav__brand nav__brand--light">CHAMELEON <span>Academia de Datos</span></span>
+        </a>
+        <p>Empoderamos a personas a través de los datos. Enseñamos habilidades prácticas para analizar, comprender y transformar el mundo con datos.</p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4>Formación</h4>
+          <ul>
+            <li><a href="#cursos">Python & Programación</a></li>
+            <li><a href="#cursos">SQL & Bases de datos</a></li>
+            <li><a href="#cursos">Analítica & BI</a></li>
+            <li><a href="#cursos">Data Engineering</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Academia</h4>
+          <ul>
+            <li><a href="#sobre">Sobre nosotros</a></li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Chameleon Academia de Datos · Todos los derechos reservados</p>
+      <div class="footer__legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Aviso legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
