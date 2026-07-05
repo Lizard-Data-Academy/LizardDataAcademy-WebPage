@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL & Bases de datos · LIZ Data Academy</title>
+  <meta name="description" content="Curso de SQL & Bases de datos de LIZ Data Academy: de cero a resolver preguntas de negocio con SQL y DuckDB." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="navbar">
+    <div class="nav__inner">
+      <!-- TODO: ajusta esta ruta a la URL real de tu página principal -->
+      <a href="../" class="nav__logo">
+        <span class="nav__brand">LIZ<span>Data Academy</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="#curso">El curso</a>
+        <a href="#plan">Plan de estudios</a>
+        <a href="#duracion">Duración</a>
+        <a href="#precio">Precio</a>
+        <a href="#contacto" class="nav__cta">Pedir información</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#curso">El curso</a>
+      <a href="#plan">Plan de estudios</a>
+      <a href="#duracion">Duración</a>
+      <a href="#precio">Precio</a>
+      <a href="#contacto">Pedir información</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="curso">
+    <div class="hero__inner">
+      <p class="breadcrumb"><a href="../">Cursos</a> <span>/</span> SQL & Bases de datos</p>
+      <p class="hero__tag">Curso · Desde cero</p>
+      <h1 class="hero__title">SQL & Bases de datos</h1>
+      <p class="hero__sub">Aprende a pensar, estructurar y consultar datos con SQL: desde qué es una base de datos hasta resolver preguntas reales de negocio. Todo el curso se trabaja sobre <strong>DuckDB</strong>, una base de datos analítica ligera pensada para aprender haciendo.</p>
+
+      <div class="hero__facts">
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+          <div><strong>8 semanas</strong><span>Duración total</span></div>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Sin experiencia previa</strong><span>Nivel de entrada</span></div>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#0EBE9A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div><strong>Online en directo</strong><span>Modalidad</span></div>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#0EBE9A" stroke-width="1.5"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12" stroke="#0EBE9A" stroke-width="1.5"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+          <div><strong>DuckDB</strong><span>Motor de base de datos</span></div>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary">Pedir información</a>
+        <a href="#plan" class="btn btn--ghost">Ver plan de estudios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DE QUÉ VA -->
+  <section class="bloque">
+    <div class="bloque__inner bloque__inner--split">
+      <div>
+        <p class="section-tag">¿De qué va este curso?</p>
+        <h2>De no saber qué es una base de datos a resolver preguntas de negocio con SQL</h2>
+        <p class="bloque__text">Este curso está pensado para construir una base sólida: primero entenderás qué son los datos y cómo se organizan, después aprenderás a diseñar y crear estructuras, y por último dominarás SQL para consultar, cruzar y analizar información real.</p>
+        <p class="bloque__text">Trabajarás siempre con <strong>DuckDB</strong>, un motor de base de datos analítico, ligero y que corre en local sin necesidad de instalar servidores. Es la forma más directa de practicar SQL de verdad desde la primera clase, con datasets que simulan escenarios de negocio reales (ventas, clientes, productos).</p>
+      </div>
+      <div class="callout-card">
+        <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#0EBE9A" stroke-width="1.5"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12" stroke="#0EBE9A" stroke-width="1.5"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+        <h3>¿Por qué DuckDB?</h3>
+        <ul>
+          <li>No necesitas instalar ni configurar un servidor de base de datos.</li>
+          <li>Sintaxis SQL estándar, muy similar a la de motores como PostgreSQL.</li>
+          <li>Pensado para análisis de datos: rápido incluso con archivos grandes.</li>
+          <li>Lo que aprendas se transfiere directamente a otros motores del mercado.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- A QUIÉN VA DIRIGIDO -->
+  <section class="bloque bloque--alt">
+    <div class="bloque__inner">
+      <p class="section-tag">¿A quién va dirigido?</p>
+      <h2>Un curso pensado para empezar desde cero</h2>
+      <div class="perfiles__grid">
+        <div class="perfil-card">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#0EBE9A" stroke-width="1.5"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Quien empieza de cero en datos</h3>
+          <p>No necesitas experiencia previa ni conocimientos de programación. Empezamos desde el concepto más básico.</p>
+        </div>
+        <div class="perfil-card">
+          <svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Analistas que quieren consolidar SQL</h3>
+          <p>Si ya trabajas con datos pero quieres afianzar fundamentos, joins, subconsultas y funciones de ventana.</p>
+        </div>
+        <div class="perfil-card">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c2.5 2 4 5 4 8a4 4 0 0 1-8 0c0-3 1.5-6 4-8z" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 18h5M10 21h4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Emprendedores y gestores</h3>
+          <p>Para quienes quieren consultar directamente los datos de su negocio sin depender de un técnico.</p>
+        </div>
+        <div class="perfil-card">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Perfiles técnicos y de producto</h3>
+          <p>Marketing, product, backend o soporte que necesitan SQL como herramienta del día a día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJETIVOS -->
+  <section class="bloque">
+    <div class="bloque__inner">
+      <p class="section-tag">Objetivos de aprendizaje</p>
+      <h2>Qué vas a aprender a lo largo del curso</h2>
+      <div class="objetivos__grid">
+        <div class="objetivo">
+          <span class="objetivo__num">01</span>
+          <p>Comprender los conceptos fundamentales de las bases de datos y para qué sirven en un entorno de negocio.</p>
+        </div>
+        <div class="objetivo">
+          <span class="objetivo__num">02</span>
+          <p>Diseñar modelos de datos: entidad-relación, modelo relacional, estrella y copo de nieve.</p>
+        </div>
+        <div class="objetivo">
+          <span class="objetivo__num">03</span>
+          <p>Crear y gestionar estructuras de datos: tablas, restricciones y relaciones entre ellas.</p>
+        </div>
+        <div class="objetivo">
+          <span class="objetivo__num">04</span>
+          <p>Escribir consultas SQL desde lo más básico hasta lo avanzado: joins, subconsultas, CTEs y funciones de ventana.</p>
+        </div>
+        <div class="objetivo">
+          <span class="objetivo__num">05</span>
+          <p>Explorar y documentar cualquier base de datos utilizando el catálogo del sistema.</p>
+        </div>
+        <div class="objetivo">
+          <span class="objetivo__num">06</span>
+          <p>Aplicar SQL a preguntas reales de negocio: ventas, clientes, productos, KPIs y tendencias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN DE ESTUDIOS -->
+  <section class="bloque bloque--alt" id="plan">
+    <div class="bloque__inner">
+      <p class="section-tag">Plan de estudios</p>
+      <h2>12 módulos + proyecto final</h2>
+      <p class="bloque__text bloque__text--intro">La progresión es siempre la misma: primero entender los datos, después estructurarlos, luego consultarlos y, por último, usarlos para resolver problemas reales de negocio.</p>
+
+      <div class="modulos">
+
+        <details class="modulo">
+          <summary><span class="modulo__index">01</span><span class="modulo__title">Introducción al mundo de los datos</span></summary>
+          <ul>
+            <li>¿Qué son los datos?</li>
+            <li>¿Qué es una base de datos?</li>
+            <li>¿Qué es SQL?</li>
+            <li>Casos de uso en negocio</li>
+            <li>Bases de datos relacionales vs Data Lake</li>
+            <li>Arquitectura de datos a alto nivel</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">02</span><span class="modulo__title">Fundamentos de bases de datos</span></summary>
+          <ul>
+            <li>Tabla, fila, columna y registro</li>
+            <li>Tipos de datos</li>
+            <li>Clave primaria</li>
+            <li>Clave foránea</li>
+            <li>Relaciones entre tablas</li>
+            <li>Integridad referencial</li>
+            <li>Tabla vs vista</li>
+            <li>Esquemas y organización de una base de datos</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">03</span><span class="modulo__title">Modelado de datos</span></summary>
+          <ul>
+            <li>Modelo entidad-relación</li>
+            <li>Modelo relacional</li>
+            <li>Modelo en estrella</li>
+            <li>Modelo copo de nieve</li>
+            <li>Interpretación de diagramas de datos</li>
+            <li>Buenas prácticas de modelado</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">04</span><span class="modulo__title">Creación y gestión de estructuras</span></summary>
+          <ul>
+            <li>CREATE TABLE</li>
+            <li>Tipos de datos</li>
+            <li>Restricciones (PRIMARY KEY, NOT NULL, UNIQUE, DEFAULT)</li>
+            <li>ALTER TABLE</li>
+            <li>DROP TABLE</li>
+            <li>Buenas prácticas en el diseño de tablas</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">05</span><span class="modulo__title">Manipulación de datos</span></summary>
+          <ul>
+            <li>INSERT</li>
+            <li>Inserciones múltiples</li>
+            <li>UPDATE</li>
+            <li>DELETE</li>
+            <li>Importancia de las transacciones (introducción)</li>
+            <li>Buenas prácticas antes de modificar datos</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">06</span><span class="modulo__title">Consultas básicas</span></summary>
+          <ul>
+            <li>SELECT</li>
+            <li>Alias</li>
+            <li>WHERE</li>
+            <li>DISTINCT</li>
+            <li>ORDER BY</li>
+            <li>LIMIT</li>
+            <li>Operadores de comparación</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">07</span><span class="modulo__title">Filtrado y funciones</span></summary>
+          <ul>
+            <li>AND, OR, NOT</li>
+            <li>IN</li>
+            <li>BETWEEN</li>
+            <li>LIKE</li>
+            <li>IS NULL</li>
+            <li>Funciones de texto</li>
+            <li>Funciones numéricas</li>
+            <li>Funciones de fecha</li>
+            <li>Variables y funciones del sistema (CURRENT_DATE, CURRENT_TIMESTAMP, etc.)</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">08</span><span class="modulo__title">Agregación de datos</span></summary>
+          <ul>
+            <li>COUNT</li>
+            <li>SUM</li>
+            <li>AVG</li>
+            <li>MIN</li>
+            <li>MAX</li>
+            <li>GROUP BY</li>
+            <li>HAVING</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">09</span><span class="modulo__title">Relaciones entre tablas</span></summary>
+          <ul>
+            <li>INNER JOIN</li>
+            <li>LEFT JOIN</li>
+            <li>RIGHT JOIN</li>
+            <li>FULL OUTER JOIN</li>
+            <li>Joins múltiples</li>
+            <li>Interpretación de relaciones</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">10</span><span class="modulo__title">Consultas avanzadas</span></summary>
+          <ul>
+            <li>Subconsultas</li>
+            <li>CTE (WITH)</li>
+            <li>CASE</li>
+            <li>UNION y UNION ALL</li>
+            <li>Introducción a funciones de ventana (ROW_NUMBER, RANK, etc.)</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">11</span><span class="modulo__title">Exploración de la base de datos</span></summary>
+          <ul>
+            <li>information_schema</li>
+            <li>Catálogo del sistema</li>
+            <li>Descubrir tablas</li>
+            <li>Descubrir columnas</li>
+            <li>Tipos de datos</li>
+            <li>Restricciones</li>
+            <li>Consultas ejecutadas (si el motor lo permite)</li>
+            <li>Documentación automática de una base de datos</li>
+          </ul>
+        </details>
+
+        <details class="modulo">
+          <summary><span class="modulo__index">12</span><span class="modulo__title">SQL aplicado al negocio</span></summary>
+          <ul>
+            <li>Resolución de preguntas de negocio</li>
+            <li>KPIs</li>
+            <li>Ventas</li>
+            <li>Clientes</li>
+            <li>Productos</li>
+            <li>Tendencias</li>
+            <li>Ejemplos de análisis habituales</li>
+          </ul>
+        </details>
+
+      </div>
+
+      <!-- PROYECTO FINAL -->
+      <div class="proyecto">
+        <div class="proyecto__head">
+          <span class="proyecto__badge">Proyecto final</span>
+          <h3>Un proyecto completo de principio a fin</h3>
+          <p>Aplicarás todo lo aprendido en un proyecto real, en una de estas dos modalidades:</p>
+        </div>
+        <div class="proyecto__grid">
+          <div class="proyecto-card">
+            <span class="proyecto-card__tag">Opción A</span>
+            <h4>Base de datos proporcionada</h4>
+            <p>Recibes una base de datos completa (por ejemplo, de un e-commerce, una cadena de tiendas o una empresa SaaS). Debes explorarla, comprender su modelo de datos y resolver una serie de retos de negocio mediante SQL.</p>
+          </div>
+          <div class="proyecto-card">
+            <span class="proyecto-card__tag">Opción B</span>
+            <h4>Base de datos construida por ti</h4>
+            <p>Diseñas un pequeño modelo de datos a partir de un escenario propuesto o de un conjunto de datos propio: creas las tablas, defines las relaciones, cargas la información y desarrollas las consultas necesarias.</p>
+          </div>
+        </div>
+        <div class="proyecto__entrega">
+          <h4>¿Qué entregas al finalizar?</h4>
+          <ul class="check-list">
+            <li>El modelo de datos.</li>
+            <li>El script de creación de tablas.</li>
+            <li>El script de carga de datos.</li>
+            <li>Un conjunto de consultas SQL documentadas.</li>
+            <li>Un breve informe con las conclusiones obtenidas.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUÉ SABRÁS AL FINALIZAR -->
+  <section class="bloque">
+    <div class="bloque__inner">
+      <p class="section-tag">Al finalizar la formación</p>
+      <h2>Esto es lo que sabrás hacer</h2>
+      <ul class="check-list check-list--grid">
+        <li>Diseñar y crear un modelo de datos relacional desde cero.</li>
+        <li>Escribir consultas SQL desde básicas hasta avanzadas (joins, subconsultas, CTEs, funciones de ventana).</li>
+        <li>Explorar y documentar cualquier base de datos con information_schema.</li>
+        <li>Resolver preguntas de negocio reales: ventas, clientes, productos y KPIs.</li>
+        <li>Trabajar con DuckDB como motor analítico de referencia.</li>
+        <li>Aplicar buenas prácticas de modelado, creación y manipulación de datos.</li>
+        <li>Entender y transferir estos conocimientos a otros motores SQL del mercado.</li>
+        <li>Tener un proyecto completo y documentado para tu portfolio.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DURACIÓN Y HORARIOS -->
+  <section class="bloque bloque--alt" id="duracion">
+    <div class="bloque__inner">
+      <p class="section-tag">Duración y horarios</p>
+      <h2>Cómo se organiza el curso</h2>
+      <!-- TODO: ajusta duración, nº de clases y horario real a tu planificación -->
+      <div class="info-grid">
+        <div class="info-card">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+          <h3>Duración total</h3>
+          <p>8 semanas · 12 módulos + proyecto final</p>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="2" stroke="#0EBE9A" stroke-width="1.5"/><path d="M3 9h18M8 2v4M16 2v4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Frecuencia</h3>
+          <p>2 clases en directo por semana</p>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0EBE9A" stroke-width="1.5"/><path d="M12 7v5l3.5 2" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Duración por clase</h3>
+          <p>2 horas en directo + trabajo autónomo</p>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#0EBE9A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>Modalidad</h3>
+          <p>Online en directo, con clases grabadas disponibles</p>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Nivel de entrada</h3>
+          <p>Ninguno. Se parte de cero</p>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#0EBE9A" stroke-width="1.5"/></svg>
+          <h3>Grupo</h3>
+          <p>Plazas limitadas para un seguimiento cercano</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIO -->
+  <section class="bloque" id="precio">
+    <div class="bloque__inner">
+      <p class="section-tag">Precio</p>
+      <h2>Invierte en una habilidad que no pasa de moda</h2>
+      <div class="pricing">
+        <div class="pricing-card">
+          <span class="pricing-card__label">SQL & Bases de datos</span>
+          <!-- TODO: sustituye el precio y las condiciones por las definitivas -->
+          <div class="pricing-card__price"><span>XXX €</span><small>pago único</small></div>
+          <p class="pricing-card__note">También disponible en 2 plazos sin coste adicional.</p>
+          <ul class="check-list">
+            <li>12 módulos + proyecto final guiado</li>
+            <li>Clases en directo y grabadas</li>
+            <li>Acceso a materiales y ejercicios</li>
+            <li>Corrección y feedback del proyecto final</li>
+            <li>Certificado de finalización</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary btn--full">Pedir información</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__inner">
+      <p class="section-tag">¿Te interesa este curso?</p>
+      <h2>Escríbenos y te contamos todo sin compromiso</h2>
+      <p class="contacto__text">Cuéntanos tu situación actual y tus objetivos: te confirmamos temario, próximas fechas y precio detallado.</p>
+      <div class="contacto__actions">
+        <a href="mailto:lizard.data.academy@gmail.com?subject=Información%20curso%20SQL%20%26%20Bases%20de%20datos" class="btn btn--primary">Escribir por email</a>
+        <a href="tel:+34682681088" class="btn btn--ghost">+34 682 681 088</a>
+      </div>
+      <!-- TODO: ajusta este enlace a la sección de contacto de tu página principal -->
+      <a href="../#contacto" class="volver">← Volver a LIZ Data Academy</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 LIZ Data Academy · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
