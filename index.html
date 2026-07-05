@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lizard · Data Academy</title>
+  <title>LIZ · Data Academy</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,13 +16,34 @@
     <div class="nav__inner">
       <a href="#" class="nav__logo">
         <img class="nav__logo-icon" src="assets/chameleon-logo.png" alt="Chameleon mascot" />
-        <span class="nav__brand">Lizard <span>Data Academy</span></span>
+        <span class="nav__brand">LIZ<span>Data Academy</span></span>
       </a>
       <nav class="nav__links">
         <a href="#inicio">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#comunidad">Comunidad</a>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button type="button" class="nav__dropdown-toggle" data-dropdown-toggle>
+            Cursos
+            <svg viewBox="0 0 24 24" fill="none" class="nav__dropdown-arrow"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav__dropdown-menu">
+            <a href="#curso-sql">SQL & Bases de datos</a>
+            <a href="#curso-powerbi">Power BI</a>
+          </div>
+        </div>
+
+        <div class="nav__dropdown" data-dropdown>
+          <button type="button" class="nav__dropdown-toggle" data-dropdown-toggle>
+            Programas
+            <svg viewBox="0 0 24 24" fill="none" class="nav__dropdown-arrow"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav__dropdown-menu">
+            <!-- TODO: sustituye el href="#" por el enlace real de cada programa -->
+            <a href="#" target="_blank" rel="noopener">Datos para emprendedores</a>
+            <a href="#" target="_blank" rel="noopener">Data Analyst</a>
+          </div>
+        </div>
+
         <a href="#contacto" class="nav__cta">Contacto</a>
       </nav>
       <button class="nav__burger" id="burger" aria-label="Menú">
@@ -31,9 +52,29 @@
     </div>
     <div class="nav__mobile" id="mobileMenu">
       <a href="#inicio">Inicio</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#recursos">Recursos</a>
-      <a href="#comunidad">Comunidad</a>
+
+      <div class="nav__dropdown nav__dropdown--mobile" data-dropdown>
+        <button type="button" class="nav__dropdown-toggle" data-dropdown-toggle>
+          Cursos
+          <svg viewBox="0 0 24 24" fill="none" class="nav__dropdown-arrow"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="#curso-sql">SQL & Bases de datos</a>
+          <a href="#curso-powerbi">Power BI</a>
+        </div>
+      </div>
+
+      <div class="nav__dropdown nav__dropdown--mobile" data-dropdown>
+        <button type="button" class="nav__dropdown-toggle" data-dropdown-toggle>
+          Programas
+          <svg viewBox="0 0 24 24" fill="none" class="nav__dropdown-arrow"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav__dropdown-menu">
+          <a href="#" target="_blank" rel="noopener">Datos para emprendedores</a>
+          <a href="#" target="_blank" rel="noopener">Data Analyst</a>
+        </div>
+      </div>
+
       <a href="#contacto">Contacto</a>
     </div>
   </header>
@@ -41,7 +82,7 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero__content">
-      <p class="hero__tag">Lizard · Data Academy</p>
+      <p class="hero__tag">LIZ · Data Academy</p>
       <h1 class="hero__title">Adaptate con datos<br/><span>Transforma tu futuro</span></h1>
       <p class="hero__sub">Aprende habilidades prácticas en datos, automatización de procesos y analítica. Adaptate e innova en un mundo impulsado por los datos y la inteligencia artificial.</p>
       <div class="hero__actions">
@@ -100,7 +141,7 @@
       <div class="sobre__text">
         <p class="section-tag">Nuestra misión</p>
         <h2>Adaptación e innovación<br/>en el mundo de los datos</h2>
-        <p>En Lizard Data Academy creemos que la adaptabilidad es la habilidad más valiosa del siglo XXI. Como el camaleón, enseñamos a nuestros estudiantes a transformarse con el entorno, dominando las herramientas y metodologías que el mercado demanda hoy y las que demandará mañana.</p>
+        <p>En LIZ Data Academy creemos que la adaptabilidad es la habilidad más valiosa del siglo XXI. Como el camaleón, enseñamos a nuestros estudiantes a transformarse con el entorno, dominando las herramientas y metodologías que el mercado demanda hoy y las que demandará mañana.</p>
         <ul class="sobre__values">
           <li>
             <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#0EBE9A" stroke-width="1.5"/><path d="m21 21-4.35-4.35" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -155,52 +196,57 @@
       <p class="section-tag">Formación</p>
       <h2>Cursos destacados</h2>
       <div class="cursos__grid">
-        <div class="curso-card">
-          <div class="curso-card__badge">Más popular</div>
+
+        <div class="curso-card" id="curso-emprendedores">
+          <div class="curso-card__badge">Destacado</div>
           <div class="curso-card__icon">
-            <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c2.5 2 4 5 4 8a4 4 0 0 1-8 0c0-3 1.5-6 4-8z" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 18h5M10 21h4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3>Python para Analítica de Datos</h3>
-          <p>Domina el ecosistema Python: Pandas, Matplotlib, NumPy y machine learning básico.</p>
-          <div class="curso-card__meta">
-            <span>40h · Intermedio</span>
-            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          <h3>Datos para emprendedores</h3>
+          <p>Aprende a usar datos para validar ideas, medir tu negocio y tomar mejores decisiones desde el día uno.</p>
+          <div class="curso-card__actions">
+            <a href="#contacto" class="btn btn--small">Pedir información</a>
+            <a href="#" class="btn btn--small-outline" target="_blank" rel="noopener">Plan de estudio</a>
           </div>
         </div>
-        <div class="curso-card">
+
+        <div class="curso-card" id="curso-data-analyst">
+          <div class="curso-card__badge">Popular</div>
+          <div class="curso-card__icon">
+            <svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Data Analyst</h3>
+          <p>El programa completo para convertirte en analista de datos: SQL, Python, Power BI y estadística aplicada.</p>
+          <div class="curso-card__actions">
+            <a href="#contacto" class="btn btn--small">Pedir información</a>
+            <a href="#" class="btn btn--small-outline" target="_blank" rel="noopener">Plan de estudio</a>
+          </div>
+        </div>
+
+        <div class="curso-card" id="curso-sql">
           <div class="curso-card__icon">
             <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#0EBE9A" stroke-width="1.5"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12" stroke="#0EBE9A" stroke-width="1.5"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#0EBE9A" stroke-width="1.5"/></svg>
           </div>
-          <h3>SQL de cero a avanzado</h3>
+          <h3>SQL & Bases de datos</h3>
           <p>Aprende a consultar, transformar y optimizar datos en cualquier motor SQL del mercado.</p>
-          <div class="curso-card__meta">
-            <span>30h · Todos los niveles</span>
-            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          <div class="curso-card__actions">
+            <a href="#contacto" class="btn btn--small">Pedir información</a>
+            <a href="#" class="btn btn--small-outline" target="_blank" rel="noopener">Plan de estudio</a>
           </div>
         </div>
-        <div class="curso-card">
+
+        <div class="curso-card" id="curso-powerbi">
           <div class="curso-card__icon">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#0EBE9A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3>Power BI Profesional</h3>
+          <h3>Power BI</h3>
           <p>Dashboards interactivos, DAX avanzado y publicación de informes en producción.</p>
-          <div class="curso-card__meta">
-            <span>25h · Intermedio</span>
-            <a href="#contacto" class="btn btn--small">Pedir info</a>
+          <div class="curso-card__actions">
+            <a href="#contacto" class="btn btn--small">Pedir información</a>
+            <a href="#" class="btn btn--small-outline" target="_blank" rel="noopener">Plan de estudio</a>
           </div>
         </div>
-        <div class="curso-card">
-          <div class="curso-card__badge curso-card__badge--new">Nuevo</div>
-          <div class="curso-card__icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0EBE9A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Data Engineering con dbt & Snowflake</h3>
-          <p>Construye pipelines de datos modernos y escalables sobre arquitecturas cloud.</p>
-          <div class="curso-card__meta">
-            <span>50h · Avanzado</span>
-            <a href="#contacto" class="btn btn--small">Pedir info</a>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -240,30 +286,13 @@
           <label for="curso">Curso de interés *</label>
           <select id="curso" name="curso" required>
             <option value="" disabled selected>Selecciona un curso...</option>
-            <optgroup label="Python & Programación">
-              <option value="python-analitica">Python para Analítica de Datos</option>
-              <option value="python-ml">Machine Learning con Python</option>
-              <option value="python-avanzado">Python Avanzado para Ingeniería de Datos</option>
+            <optgroup label="Programas">
+              <option value="datos-emprendedores">Datos para emprendedores</option>
+              <option value="data-analyst">Data Analyst</option>
             </optgroup>
-            <optgroup label="SQL & Bases de datos">
-              <option value="sql-basico">SQL de cero a avanzado</option>
-              <option value="sql-performance">SQL Performance & Optimización</option>
-              <option value="sql-nosql">SQL vs NoSQL: guía práctica</option>
-            </optgroup>
-            <optgroup label="Analítica & Business Intelligence">
-              <option value="powerbi">Power BI Profesional</option>
-              <option value="tableau">Tableau para analistas</option>
-              <option value="dax">DAX Avanzado para Power BI</option>
-            </optgroup>
-            <optgroup label="Data Engineering & Cloud">
-              <option value="dbt-snowflake">Data Engineering con dbt & Snowflake</option>
-              <option value="databricks">Databricks & Apache Spark</option>
-              <option value="cloud-data">Arquitecturas Cloud de Datos (AWS/Azure/GCP)</option>
-            </optgroup>
-            <optgroup label="Ciencia de Datos">
-              <option value="estadistica">Estadística para Ciencia de Datos</option>
-              <option value="ml-avanzado">Machine Learning Avanzado</option>
-              <option value="deep-learning">Introducción al Deep Learning</option>
+            <optgroup label="Cursos">
+              <option value="sql-bases-de-datos">SQL & Bases de datos</option>
+              <option value="powerbi">Power BI</option>
             </optgroup>
           </select>
         </div>
@@ -288,7 +317,7 @@
       <div class="footer__brand">
         <a href="#" class="nav__logo">
           <img class="nav__logo-icon" src="assets/chameleon-logo.png" alt="Chameleon mascot" />
-          <span class="nav__brand nav__brand--light">Lizard<span>Data Academy</span></span>
+          <span class="nav__brand nav__brand--light">LIZ<span>Data Academy</span></span>
         </a>
         <p>Empoderamos a personas a través de los datos. Enseñamos habilidades prácticas para analizar, comprender y transformar el mundo con datos.</p>
       </div>
@@ -296,17 +325,17 @@
         <div>
           <h4>Formación</h4>
           <ul>
-            <li><a href="#cursos">Python & Programación</a></li>
-            <li><a href="#cursos">SQL & Bases de datos</a></li>
-            <li><a href="#cursos">Analítica & BI</a></li>
-            <li><a href="#cursos">Data Engineering</a></li>
+            <li><a href="#curso-data-analyst">Data Analyst</a></li>
+            <li><a href="#curso-emprendedores">Datos para emprendedores</a></li>
+            <li><a href="https://lizard-data-academy.github.io/LizardDataAcademy-Courses/sql/">SQL & Bases de datos</a></li>
+            <li><a href="#curso-powerbi">Power BI</a></li>
           </ul>
         </div>
         <div>
           <h4>Academia</h4>
           <ul>
             <li><a href="#sobre">Sobre nosotros</a></li>
-            <li><a href="#comunidad">Comunidad</a></li>
+            <li><a href="#cursos">Cursos</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
@@ -314,7 +343,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2025 Lizard Data Academy · Todos los derechos reservados</p>
+      <p>© 2025 LIZ Data Academy · Todos los derechos reservados</p>
       <div class="footer__legal">
         <a href="#">Política de privacidad</a>
         <a href="#">Aviso legal</a>

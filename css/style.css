@@ -1,5 +1,5 @@
 /* ===========================
-   LIZARD DATA ACADEMY
+   LIZ DATA ACADEMY
    style.css
    =========================== */
 
@@ -31,7 +31,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font);
   color: var(--black);
-  background: var(--white);
+  background: linear-gradient(160deg, #f0fdf9 0%, #f8fafc 45%, #eff6ff 100%);
+  background-attachment: fixed;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -104,6 +105,18 @@ input, select, textarea {
   background: var(--brand);
   color: var(--white);
 }
+.btn--small-outline {
+  padding: .45rem 1rem;
+  font-size: .8rem;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--gray-700);
+  border: 1.5px solid var(--gray-200);
+}
+.btn--small-outline:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
 .btn--full { width: 100%; }
 
 /* ===========================
@@ -113,7 +126,7 @@ input, select, textarea {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(255,255,255,.92);
+  background: rgba(240,253,249,.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition), box-shadow var(--transition);
@@ -137,6 +150,7 @@ input, select, textarea {
   gap: .75rem;
 }
 .nav__logo-icon { width: 38px; height: 38px; flex-shrink: 0; object-fit: contain; }
+
 .nav__brand {
   font-size: .9rem;
   font-weight: 700;
@@ -154,6 +168,7 @@ input, select, textarea {
 }
 .nav__brand--light { color: var(--white); }
 .nav__brand--light span { color: var(--brand); }
+
 .nav__links {
   display: flex;
   align-items: center;
@@ -174,6 +189,63 @@ input, select, textarea {
   font-weight: 600 !important;
 }
 .nav__cta:hover { background: var(--brand-dark) !important; }
+
+/* --- Dropdowns: Cursos / Programas --- */
+.nav__dropdown {
+  position: relative;
+}
+.nav__dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  padding: 0;
+  transition: color var(--transition);
+}
+.nav__dropdown-toggle:hover { color: var(--brand); }
+.nav__dropdown-arrow {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition);
+}
+.nav__dropdown.open .nav__dropdown-arrow { transform: rotate(180deg); }
+
+.nav__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + .9rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  min-width: 220px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: .5rem;
+  flex-direction: column;
+  gap: .35rem;
+  z-index: 50;
+}
+.nav__dropdown.open .nav__dropdown-menu { display: flex; }
+.nav__dropdown-menu a {
+  padding: .6rem .9rem;
+  border-radius: 8px;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  white-space: nowrap;
+  border: 1.5px solid var(--gray-200);
+  transition: var(--transition);
+}
+.nav__dropdown-menu a:hover {
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  border-color: var(--brand);
+}
+
 .nav__burger {
   display: none;
   flex-direction: column;
@@ -203,6 +275,27 @@ input, select, textarea {
   border-bottom: 1px solid var(--gray-100);
 }
 .nav__mobile.open { display: flex; }
+
+/* Mobile dropdown: no absolute positioning, expands inline */
+.nav__dropdown--mobile .nav__dropdown-toggle {
+  width: 100%;
+  justify-content: space-between;
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.nav__dropdown--mobile .nav__dropdown-menu {
+  position: static;
+  transform: none;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  min-width: 0;
+  padding: 0 0 0 1rem;
+  margin-top: .25rem;
+}
+.nav__dropdown--mobile .nav__dropdown-menu a {
+  white-space: normal;
+}
 
 /* ===========================
    HERO
@@ -255,7 +348,7 @@ input, select, textarea {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(14,190,154,.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14,190,154,.15) 0%, rgba(56,132,255,.06) 60%, transparent 80%);
   pointer-events: none;
 }
 .hero__mascot {
@@ -282,8 +375,9 @@ input, select, textarea {
   display: flex;
   align-items: center;
   gap: .6rem;
-  background: var(--white);
-  border: 1.5px solid var(--gray-200);
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(14,190,154,.2);
   border-radius: var(--radius);
   padding: .6rem 1rem;
   font-size: .78rem;
@@ -302,9 +396,9 @@ input, select, textarea {
    STATS
    =========================== */
 .stats {
-  background: var(--gray-100);
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 1px solid var(--gray-200);
+  background: linear-gradient(90deg, #0EBE9A 0%, #0a9a7d 50%, #0d7fcc 100%);
+  border-top: none;
+  border-bottom: none;
 }
 .stats__inner {
   max-width: 1200px;
@@ -321,25 +415,26 @@ input, select, textarea {
   display: block;
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--brand);
+  color: var(--white);
   letter-spacing: -.02em;
 }
 .stats__item span {
   font-size: .82rem;
-  color: var(--gray-500);
+  color: rgba(255,255,255,.75);
   font-weight: 500;
 }
 .stats__divider {
   width: 1px;
   height: 48px;
-  background: var(--gray-200);
+  background: rgba(255,255,255,.25);
 }
 
 /* ===========================
    SOBRE
    =========================== */
 .sobre {
-  padding: 7rem 2rem;
+  padding: 7rem 2rem 4rem;
+  background: linear-gradient(180deg, rgba(248,250,252,0) 0%, rgba(240,253,249,.6) 100%);
 }
 .sobre__inner {
   max-width: 1200px;
@@ -387,6 +482,8 @@ input, select, textarea {
 }
 .sobre__feature {
   padding: 1.5rem;
+  background: rgba(255,255,255,.7);
+  backdrop-filter: blur(6px);
   border: 1.5px solid var(--gray-200);
   border-radius: var(--radius-lg);
   transition: var(--transition);
@@ -395,6 +492,7 @@ input, select, textarea {
   border-color: var(--brand);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  background: rgba(255,255,255,.95);
 }
 .sobre__feature svg {
   width: 28px;
@@ -416,9 +514,10 @@ input, select, textarea {
    CURSOS
    =========================== */
 .cursos {
-  background: var(--gray-100);
-  padding: 7rem 2rem;
-  border-top: 1px solid var(--gray-200);
+  padding: 3rem 2rem 7rem;
+  border-top: none;
+  background: linear-gradient(160deg, rgba(248,250,252,.8) 0%, rgba(237,253,247,.9) 100%);
+  scroll-margin-top: 90px;
 }
 .cursos__inner {
   max-width: 1200px;
@@ -437,19 +536,22 @@ input, select, textarea {
 }
 .curso-card {
   position: relative;
-  background: var(--white);
-  border: 1.5px solid var(--gray-200);
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(14,190,154,.15);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
   gap: .75rem;
+  scroll-margin-top: 90px;
 }
 .curso-card:hover {
   border-color: var(--brand);
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
+  background: rgba(255,255,255,.97);
 }
 .curso-card__badge {
   position: absolute;
@@ -486,18 +588,14 @@ input, select, textarea {
   line-height: 1.6;
   flex: 1;
 }
-.curso-card__meta {
+.curso-card__actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: .6rem;
   margin-top: .5rem;
   padding-top: 1rem;
   border-top: 1px solid var(--gray-100);
-}
-.curso-card__meta span {
-  font-size: .75rem;
-  color: var(--gray-500);
-  font-weight: 500;
+  flex-wrap: wrap;
 }
 
 /* ===========================
@@ -505,7 +603,7 @@ input, select, textarea {
    =========================== */
 .contacto {
   padding: 7rem 2rem;
-  background: var(--black);
+  background: linear-gradient(135deg, #0a1628 0%, #0d2d4a 60%, #0f3d2e 100%);
   color: var(--white);
 }
 .contacto__inner {
@@ -605,7 +703,7 @@ select { appearance: none; cursor: pointer; }
    FOOTER
    =========================== */
 .footer {
-  background: var(--gray-900);
+  background: linear-gradient(135deg, #0a1628 0%, #0c2a1e 100%);
   color: rgba(255,255,255,.6);
   padding: 4rem 2rem 2rem;
 }
@@ -701,9 +799,9 @@ select { appearance: none; cursor: pointer; }
   .hero__mascot { width: 180px; height: 180px; }
   .stats__divider { display: none; }
   .stats__inner { gap: 1.5rem; justify-content: center; }
-  .sobre { padding: 5rem 1.5rem; }
+  .sobre { padding: 5rem 1.5rem 3rem; }
   .sobre__grid { grid-template-columns: 1fr; }
-  .cursos { padding: 5rem 1.5rem; }
+  .cursos { padding: 2rem 1.5rem 5rem; }
   .contacto { padding: 5rem 1.5rem; }
   .contacto__form { padding: 1.75rem; }
   .footer { padding: 3rem 1.5rem 1.5rem; }

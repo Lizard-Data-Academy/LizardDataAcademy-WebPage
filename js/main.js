@@ -1,5 +1,5 @@
 /* ===========================
-   Lizard Data Academy
+   LIZ Data Academy
    main.js
    =========================== */
 
@@ -21,9 +21,43 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.setAttribute('aria-expanded', isOpen);
   });
 
-  // Close mobile menu when a link is clicked
+  // Close mobile menu when a plain link (not a dropdown toggle) is clicked
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // ── NAV DROPDOWNS: Cursos / Programas ─────────────────────
+  const dropdowns = document.querySelectorAll('[data-dropdown]');
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('[data-dropdown-toggle]');
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('open');
+
+      // Close any other open dropdown first
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove('open');
+      });
+
+      dropdown.classList.toggle('open', !isOpen);
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', () => {
+    dropdowns.forEach(d => d.classList.remove('open'));
+  });
+
+  // Close a dropdown after choosing one of its links
+  dropdowns.forEach(dropdown => {
+    dropdown.querySelectorAll('.nav__dropdown-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        dropdown.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
   });
 
   // ── SCROLL REVEAL (Intersection Observer) ─────────────────
@@ -109,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── SMOOTH ACTIVE NAV LINK ────────────────────────────────
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav__links a');
+  const navLinks = document.querySelectorAll('.nav__links > a');
 
   const linkObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
